@@ -1,0 +1,10 @@
+<h3>Scan New Documents for {{ companyName }}</h3>
+<div *ngIf="!docScanned && !docLoaded">
+    <app-loaddoc (docUploadedEvent)="docIsUploaded($event)" [companyId]="companyId"></app-loaddoc>
+</div>
+<div *ngIf="!docScanned && docLoaded">
+    <app-scanthedoc (docScannedEvent)="docIsScanned($event)" [companyId]="companyId" [documentId]="documentId"></app-scanthedoc>
+</div>
+<div *ngIf="docScanned && docLoaded">
+    <app-manualedit [companyId]="companyId" [documentId]="documentId"></app-manualedit>
+</div>

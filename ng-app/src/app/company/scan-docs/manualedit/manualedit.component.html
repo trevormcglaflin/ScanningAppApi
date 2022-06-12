@@ -1,0 +1,110 @@
+<h3>Manual Edit</h3>
+<form #incomeStatementForm = "ngForm" (ngSubmit) = "onClickSubmit(incomeStatementForm.value)">
+    <div class="container">
+        <div class="row">
+                <div class="col-6">
+                    <table class="table table-bordered table-dark">
+                        <thead>
+                        <tr>
+                            <th scope="col">Line Item</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Sales</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.sales"  name="sales" value="{{incomeStatement.sales}}"/></td>
+                        </tr>
+                        <tr>
+                            <td>Returns and Allowances</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.returns_and_allowances" name="returns_and_allowances" value="{{incomeStatement.returns_and_allowances}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Net Sales</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.net_sales" name="net_sales" value="{{incomeStatement.net_sales}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Cost of Sales</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.cogs" name="cogs" value="{{incomeStatement.cogs}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Gross Profit</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.gross_profit" name="gross_profit" value="{{incomeStatement.gross_profit}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Salaries and Wages Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.salaries_and_wages_expense" name="salaries_and_wages_expense" value="{{incomeStatement.salaries_and_wages_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Repairs and Maintenence Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.repairs_and_maintenence_expense" name="repairs_and_maintenence_expense" value="{{incomeStatement.repairs_and_maintenence_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Bad Debt Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.bad_debt_expense" name="bad_debt_expense" value="{{incomeStatement.bad_debt_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Rent Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.rent_expense" name="rent_expense" value="{{incomeStatement.rent_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Taxes and Licenses Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.taxes_and_licenses_expense" name="taxes_and_licenses_expense" value="{{incomeStatement.taxes_and_licenses_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Interest Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.interest_expense" name="interest_expense" value="{{incomeStatement.interest_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Charitable Contributions Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.charitable_contributions_expense" name="charitable_contributions_expense" value="{{incomeStatement.charitable_contributions_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Depreciation Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.depreciation_expense" name="depreciation_expense" value="{{incomeStatement.depreciation_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Depletion Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.depletion_expense" name="depletion_expense" value="{{incomeStatement.depletion_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Total Operating Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.total_operating_expense" name="total_operating_expense" value="{{incomeStatement.total_operating_expense}}" /></td>
+            
+                        </tr>
+                        <tr>
+                            <td>Operating Profit</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.operatingProfit" name="operatingProfit" value="{{incomeStatement.operating_profit}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Other Income</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.operating_profit" name="operating_profit" value="{{incomeStatement.other_income}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Taxable Income</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.taxable_income" name="taxable_income" value="{{incomeStatement.taxable_income}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Income Tax Expense</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.income_tax_expense" name="income_tax_expense" value="{{incomeStatement.income_tax_expense}}" /></td>
+                        </tr>
+                        <tr>
+                            <td>Net Income</td>
+                            <td><input type="text" [(ngModel)]="incomeStatementForm.net_income" name="net_income" value="{{incomeStatement.net_income}}" /></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <div class="mb-3">
+                        <label for="year" class="form-label">Year</label>
+                        <input type="text" class="form-control" [(ngModel)]="incomeStatementForm.year" name="year" />
+                    </div>
+                    <button type="submit" value="submit" class="btn btn-success">Save Income Statement</button>
+                </div>
+        </div>
+    </div>
+</form>
+
+
+

@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8000/api/v1',
-  jwtLogin: 'api-token-auth/',
-  jwtRefresh: 'api-token-refresh/',
+  apiUrl: 'http://localhost:8000',
+  jwtLogin: 'api/v1/api-token-auth/',
+  jwtRefresh: 'api/v1/api-token-refresh/',
 };
 
 /*
